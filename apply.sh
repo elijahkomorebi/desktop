@@ -24,10 +24,11 @@ echo -e "${CYAN}Updating nvim configuration...${RESET}"
 cp "$THEME_DIR/nvim/theme.lua" "$HOME/.config/nvim/lua"
 
 echo -e "${CYAN}Updaing awww wallpaper...${RESET}"
-awww img "$THEME_DIR/wallpaper.png" --transition-type wave --transition-fps 240
+awww img "$THEME_DIR/wallpaper.png" --transition-type grow --transition-fps 240
 
 echo -e "${CYAN}Updating hypr configuration...${RESET}"
 cp "$THEME_DIR/hypr/theme.lua" "$HOME/.config/hypr/config"
+cp "$THEME_DIR/hypr/hyprlock.conf" "$HOME/.config/hypr/config"
 hyprctl reload
 
 echo -e "${CYAN}Updaing kitty configuration...${RESET}"
