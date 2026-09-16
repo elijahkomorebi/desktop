@@ -20,6 +20,9 @@ echo -e "${CYAN}Applying theme: ${RESET}${GREEN}$THEME${RESET}"
 export THEME="$THEME"
 echo $THEME > .current_theme
 
+echo -e "${CYAN}Updating zshrc configuration...${RESET}"
+cp .zshrc "$HOME/.zshrc"
+
 echo -e "${CYAN}Updating nvim configuration...${RESET}"
 cp "$THEME_DIR/nvim/theme.lua" "$HOME/.config/nvim/lua"
 
